@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap')
+
+*
+  font-family: 'Inter', sans-serif
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  outline: none
+  border: none
+  text-decoration: none
+  transition: .2s linear
+
+$main-color: #4479FB
+$second-color: #061A40
+$black: #4479FB
+$red: #ef0046
+$white: #fff
+$light-color: #666
+$light-gray: #ebebf0
+$gray-bg: #f2f2f2
+$light-bg: #f7f7f7
+$border: .1rem solid rgba(0,0,0,.2)
+$box-shadow: 0 1rem 1rem rgba(0,0,0,.05)
+
+@mixin grid($val)
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr))
+  gap: 1.5rem
+
+@mixin font($size)
+  font-family: 'Satisfy', cursive
+  font-size: $size
+  color: $main-color
+
+html
+  font-size: 62.5%
+  overflow-x: hidden
+  scroll-behavior: smooth
+  scroll-padding-top: 8.5rem
+
+::-webkit-scrollbar
+  width: 0.75rem
+
+::-webkit-scrollbar-track
+  background: $white
+
+::-webkit-scrollbar-thumb
+  background: $main-color
+  border-radius: 5rem
+
+*::selection
+  background: $main-color
+  color: $white
+
+section
+  padding: 2rem 9%
+
+.heading
+  text-align: center
+  text-transform: capitalize
+  padding-bottom: 2rem
+
+  span
+    font-family: "Satisfy", cursive
+    font-size: 3rem
+    color: #27ae60
+
+  h3
+    font-size: 3rem
+    color: $black
+
+.capitalize
+  text-transform: capitalize
+
+.lowercase
+  text-transform: lowercase !important
+
+.text-underline
+  text-decoration: underline
+
+.py-2
+  padding-top: 2rem
+  padding-bottom: 2rem
+
+.font-bold
+  font-weight: bold
+
+.fs-1
+  font-size: 1.1rem !important
+
+.fs-2
+  font-size: 1.5rem !important
+
+.fs-3
+  font-size: 1.8rem !important
+
+.fs-4
+  font-size: 4rem !important
+
+.w-15
+  width: 15rem
+
+.w-35
+  width: 35rem !important
+
+.w-100
+  width: 100% !important
+
+.h-100
+  height: 100%
+
+.mt-1
+  margin-top: 1rem
+
+.mt-3
+  margin-top: 3rem
+
+.mt-4
+  margin-top: 4rem
+
+.mt-5
+  margin-top: 5rem
+
+.mt-6
+  margin-top: 6rem
+
+.mb-0
+  margin-bottom: 0 !important
+
+.mb-6
+  margin-bottom: 6rem
+
+.mr-2
+  margin-right: 2rem
+
+.ml-1
+  margin-left: 1rem
+
+.my-1
+  margin-top: 1rem !important
+  margin-bottom: 1rem !important
+
+.my-2
+  margin-top: 2rem !important
+  margin-bottom: 2rem !important
+
+.m-4
+  margin: 4rem
+
+.pb-0
+  padding-bottom: 0 !important
+
+.p-5
+  padding: 5rem
+
+.pl-10
+  padding-left: 10rem !important
+
+.custom-modal-p
+  padding: 30px 30px 10px 30px !important
+
+.mb-1
+  margin-bottom: 1rem !important
+
+.mb-2
+  margin-bottom: 2rem !important
+
+.mb-3
+  margin-bottom: 3rem !important
+
+.mb-4
+  margin-bottom: 4rem !important
+
+.mb--2
+  margin-bottom: -2rem
+
+.m-half
+  margin: 0.5rem
+
+.overflow-hidden
+  overflow: hidden !important
+
+.bg-dark
+  background-color: #000
+
+.bg-none
+  background: none !important
+
+.cursor-pointer
+  cursor: pointer
+
+.top--8
+  top: -8rem !important
+
+.p-relative
+  position: relative
+
+.d-inline
+  display: inline !important
+
+.d-block
+  display: block !important
+
+.text-center
+  text-align: center
+
+.text-right
+  text-align: right
+
+.position-relative
+  position: relative
+
+.d-flex
+  display: flex
+  justify-content: space-between !important
+  align-items: center
+
+.justify-content-end
+  display: flex
+  justify-content: flex-end !important
+
+.justify-content-center
+  display: flex
+  justify-content: center !important
+
+.g-1
+  gap: 1rem !important
+
+.color-red
+  color: $red !important
+
+.color-error
+  color: #cc0000 !important
+
+.color-main
+  color: $main-color !important
+
+.color-gray
+  color: rgba(0, 0, 0, 0.5)
+
+.color-span
+  color: rgb(83, 89, 110)
+
+.instructions
+  color: $main-color !important
+  font-size: 1.2rem
+  margin: 1rem 0 2.5rem
+
+.small-note
+  color: rgba(0, 0, 0, 0.50)
+  font-size: 11px
+  font-weight: 500
+
+.btn
+  display: inline-block
+  margin-top: 1rem
+  padding: 1rem 1.8rem
+  font-size: 1.7rem
+  cursor: pointer
+  color: $white
+  background: $main-color
+  border-radius: .5rem
+
+  &:hover
+    background: #0e4fee
+
+.btn-flex
+  display: flex
+  justify-content: center
+  align-items: center
+
+.skip-btn
+  font-size: 1.7rem
+  color: $main-color
+  cursor: pointer
+
+  &:hover
+    color: #0e4fee
+
+.border-none
+  border: none !important
+
+.toastContainer
+  display: flex
+  flex-direction: column
+  color: $black
+  justify-content: center
+  align-items: center
+
+  h3
+    font-size: 24px !important
+    margin-top: 4rem
+    margin-bottom: 20px
+    font-weight: 600
+  p
+    font-size: 14px
+    color: #808080
+
+:disabled
+  cursor: not-allowed
+  background-color: #4479fb80
+  &:hover
+    cursor: not-allowed
+    background-color: #4479fb80
+
+.custom-select
+  appearance: none
+  border: none
+  border-radius: 7px
+  outline: 0
+  background: #f2f2f2
+  width: 100%
+  border: 0
+  margin: 0 0 2rem
+  padding: 15px
+  font-size: 1.5rem
+  border-radius: 4px
+  cursor: pointer
+  color: #6d6d6d
+
+  &:focus-visible
+    outline: none
+
+.select-minimal
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c7/Antu-go-down-24.svg')
+  background-repeat: no-repeat, repeat
+  background-position: right 1em top 50%, 0 0
+  background-size: 1.1em auto, 100%
+
+  &:-ms-expand
+    display: none
+
+.main-container
+  display: flex
+  width: 100%
+  height: 100%
+
+.mobile-wrapper
+  display: flex
+  flex-direction: column
+  background-color: #f2f2f2
+
+  .mobile-wrapper-container
+    display: flex
+    flex-direction: column
+    flex: 1
+    min-height: 100vh
+    max-width: 100%
+    width: 460px
+    margin: 0 auto
+    background-color: $white
+
+.no-cart-items
+  background-color: $light-bg
+  text-align: center
+  font-size: 1.5rem
+  padding: 2rem
+  color: $light-color
+  border-radius: 0.5rem
+  margin: 40% 2rem
+
+.window-loader
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  font-size: 1.8rem
+  color: #808080
+  margin: auto
+
+  img
+    width: 70%
+
+// Media queries
+
+@media (max-width:991px)
+
+  html
+    font-size: 55%
+
+  .header
+    padding: 2rem
+
+  section
+    padding: 2rem
+  .paymentContainer
+    width: 100% !important
+
+@media (max-width:768px)
+  form
+    .input-break
+      gap: 1rem !important
+
+  .toastContainer
+    h3
+      font-size: 20px !important
+
+  #menu-btn
+    display: inline-block !important
+
+  .header .navbar
+    position: absolute
+    top: 99%
+    left: 0
+    right: 0
+    background: $white
+    border-top: $border
+    border-bottom: $border
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)
+
+    &.active
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+
+    a
+      font-size: 2rem
+      margin: 2rem
+      display: block
+
+  .slider .home-parallax-img
+    top: 0
+    right: 0
+    width: 130%
+
+    .contact form .flex .inputBox
+      width: 100%
+
+  .display-none
+    display: none !important
+
+  .d-none-mobile
+    display: none
+
+@media (max-width:450px)
+
+  html
+    font-size: 50%
+
+  .shopping-cart-container .cart-total
+
+    .box
+      text-align: center
+
+      .btn
+        width: 100%
+
+  .slider .content
+    h3
+      font-size: 3rem
+
+    p
+      font-size: 1.5rem

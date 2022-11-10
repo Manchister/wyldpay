@@ -1,0 +1,240 @@
+@use '../base' as *
+
+.menu-form
+    margin-top: 6rem
+
+    .container
+        max-width: 85%
+        padding-left: 15px
+        padding-right: 15px
+        margin-left: auto
+        margin-right: auto
+
+        .main-content
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-top: 2.5rem
+            margin-bottom: 2.5rem
+            width: 90%
+
+            .btn
+                margin-top: 0
+                padding: 1.25rem 1.8rem !important
+                width: 17rem !important
+
+        h3,h4
+            color: $black
+
+        h3
+            font-size: 3rem
+            margin-bottom: 1.5rem
+
+        h4
+            font-size: 2.5rem
+            text-align: center
+
+        p
+            color: $light-color
+            font-size: 1.5rem
+            line-height: 1.5
+
+        .btn-container
+            display: flex
+            justify-content: flex-end
+            margin-bottom: 5rem
+
+            .btn
+                width: 25%
+
+    .category
+        display: flex
+        overflow-x: scroll
+        padding: 1rem
+        border-bottom: 1px solid #eee
+        margin-bottom: 2rem
+        width: 90%
+
+        &::-webkit-scrollbar
+            height: 7px
+
+        h5
+            color: #666
+            font-size: 1.8rem
+
+        a
+            display: block
+
+        .box
+            cursor: pointer
+            padding: 1.5rem 2rem
+
+            &:hover
+                h5
+                    color: $white
+
+        .selected
+            color: $white
+            background-color: $main-color
+
+            h5
+                color: $white
+
+.form-modal
+    .custom-content
+        width: fit-content !important
+
+    h2
+        text-align: center
+        color: $black
+        font-size: 2.8rem
+
+    form
+        display: flex
+        flex-direction: column
+        width: 100%
+        margin-top: 1rem
+        border-radius: 4px
+        padding: 1rem
+
+    input, textarea
+        outline: 0
+        background: $gray-bg
+        width: 100%
+        border: 0
+        margin: 0 0 2rem
+        padding: 15px
+        font-size: 1.5rem
+        border-radius: 4px
+        color: $black
+
+    .img-label
+        background: $gray-bg
+        width: 100%
+        height: fit-content
+        cursor: pointer
+        margin: 0 0 2rem
+        padding: 15px
+        font-size: 1.5rem
+        border-radius: 4px
+        display: flex
+        justify-content: space-between
+
+    .upload-icon
+        width: 15px
+        color: #6d6d6d
+
+    span
+        color: #6d6d6d
+
+    .img-box
+        display: flex
+        justify-content: center
+
+    .img-obj
+        height: 8rem
+        margin-bottom: 1rem
+        width: 40%
+        object-fit: contain
+
+    textarea
+        background-color: $white !important
+        border: 1px solid $light-gray
+        resize: none
+
+.items-container
+    margin-bottom: 2rem
+    display: flex
+    flex-wrap: wrap
+    gap: 2rem
+
+    .no-items
+        width: 100%
+        background-color: $light-bg
+        text-align: center
+        font-size: 1.5rem
+        padding: 2rem
+        color: $light-color
+        border-radius: 0.5rem
+        margin: 10rem 0
+
+    .box
+        border-radius: 5rem
+        position: relative
+        background: $light-bg
+        padding: 1.8rem 2rem
+        max-width: fit-content
+        text-align: center
+        display: flex
+        align-items: center
+
+        i
+            color: $main-color
+            font-size: 1.8rem
+            position: absolute
+            left: 1rem
+            cursor: pointer
+
+        .image
+            margin: 1rem 0
+
+        img
+            height: 15rem
+            width: 15rem
+            object-fit: contain
+            user-select: none
+
+        .content
+
+        h4
+            font-size: 1.8rem !important
+            font-weight: 100
+            color: $black
+
+        .custom-padding
+            padding: 3px 9px
+
+        .price
+            font-size: 2rem
+            color: $black
+
+            span
+                font-size: 1.5rem
+                color: $light-color
+                text-decoration: line-through
+
+@media (max-width: 768px)
+    .menu-form
+        margin-top: 3rem
+
+        .container
+            max-width: 95% !important
+
+        .btns-flex
+            display: flex
+            gap: 2rem
+
+        .category
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr))
+
+        .btn-container
+            .btn
+                width: 50% !important
+
+@media (max-width: 640px)
+    .menu-form
+        margin-top: 2rem
+
+        .container
+            max-width: 85% !important
+
+        .btns-flex
+            display: flex
+            gap: 0rem
+
+        .category
+            grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr))
+
+        .btn-container
+            .btn
+                width: 40% !important

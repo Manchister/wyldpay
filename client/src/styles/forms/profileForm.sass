@@ -1,0 +1,306 @@
+@use '../base' as *
+
+.profile-form
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 60px
+    max-width: 65%
+    margin: 5rem auto
+    padding-bottom: 2rem
+
+    h3
+        font-size: 3rem
+        color: $black
+        margin-bottom: 1.5rem
+
+    p
+        color: $light-color
+        font-size: 1.5rem
+        line-height: 1.5
+        margin-bottom: 1.5rem
+
+    .card
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 4rem
+        border: 1px solid #eee
+        cursor: pointer
+        margin: 2rem 4rem
+        border-radius: 7px
+        user-select: none
+
+        img
+            width: 18rem
+
+    form
+        padding: 2rem 0
+
+        .input-break
+            display: flex
+            gap: 4rem
+
+        .input-group
+            margin: 0 0 2rem
+            width: 100%
+
+            label
+                font-size: 1.5rem
+                margin-bottom: 1rem
+                display: inline-block
+                color: #666
+
+    .error
+        color: #cc0000
+        font-size: 1.3rem
+        display: inline-block
+        margin-top: .25rem
+
+    input
+        outline: 0
+        background: $gray-bg
+        width: 100%
+        border: 0
+        padding: 15px
+        box-sizing: border-box
+        font-size: 1.5rem
+        border-radius: 3px
+        color: $black
+
+        .btn-container
+            display: flex
+            justify-content: center
+
+            .btn
+                width: 15rem
+
+    .input-group
+        margin: 0 0 2rem
+        width: 100%
+
+    label
+        font-size: 1.5rem
+        margin-bottom: 1rem
+        display: inline-block
+        color: #666
+
+    .img-box
+        display: flex
+        margin: 0 0 3rem
+        background-color: $gray-bg
+        width: 100%
+        height: 13.5rem
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 3px
+        cursor: pointer
+
+        img
+            width: 18rem
+            height: 12rem
+            object-fit: contain
+            user-select: none
+            cursor: pointer
+
+    .icon-img-edit
+        font-size: 1.5rem
+        color: #4479FB
+        position: absolute
+        cursor: pointer
+        top: 0
+        left: 0
+        margin: 1rem
+
+        &:hover
+            color: #27ae60
+
+    .fixed-box
+        display: flex
+        padding: 15px
+        margin: 0 0 2rem
+        background-color: $gray-bg
+        width: 100%
+        height: 5rem
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        border-radius: 3px
+
+        a
+            color: $main-color
+            font-size: 1.5rem
+            font-weight: 600
+            cursor: pointer
+
+    .flag-dropdown
+        border: none !important
+        background: $gray-bg
+
+    .selected-flag
+        &:hover,
+        &:focus
+            background-color: $gray-bg !important
+
+.header
+    position: sticky
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1000
+    background: $white
+    box-shadow: $box-shadow
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: 2rem 0
+
+.logo
+    font-size: 2.5rem
+    font-weight: bolder
+    color: $black
+    padding-left: 2rem
+
+    i
+        padding-right: .7rem
+        color: $main-color
+
+.navbar
+    a
+        font-size: 1.7rem
+        margin: 0 1rem
+        color: $light-color
+
+    &:hover
+        color: $main-color
+
+.icons
+    display: flex
+    gap: 5px
+
+    .menu-custom, .cart-custom
+        height: 4.5rem
+        width: 4.5rem
+        line-height: 4.5rem
+        font-size: 2rem
+        background: $light-bg
+        color: $black
+        border-radius: .5rem
+        margin-left: .3rem
+        cursor: pointer
+        text-align: center
+
+    &:hover
+        color: $white
+        background: $main-color
+
+    .quantity
+        position: absolute
+        right: 0
+        bottom: 0
+        width: 1.5rem
+        font-size: 1.3rem
+        height: 1.5rem
+        border-radius: 50%
+        border: 1px solid
+        line-height: normal
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: $main-color
+        color: $white
+        padding: 8px
+        user-select: none
+        transform: translate(25%, 25%)
+
+    &:hover
+        color: $main-color
+        background-color: $white
+
+#menu-btn
+    display: none
+
+@keyframes fadeUp
+    0%
+        transform: translateY(5rem)
+        opacity: 0
+
+.dropdown
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    img
+        width: 30px
+        height: 30px
+        border-radius: 50%
+        vertical-align: middle
+
+    & .dropbtn
+        font-size: 1.8rem
+        border: none
+        outline: none
+        color: $black
+        padding-left: 10px
+        background-color: inherit
+        font-family: inherit
+        margin: 0
+        cursor: pointer
+
+    i
+        margin-left: 8px
+
+    &-content
+        opacity: 0
+        visibility: hidden
+        transition-delay: .1s
+        display: block
+        position: absolute
+        background-color: $white
+        min-width: 15rem
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+        z-index: 1
+        top: 5rem
+        padding: 0.5rem 0.3rem 0.65rem 0.3rem
+
+    &-content a, span
+        color: black
+        padding: 12px 16px
+        text-decoration: none
+        display: block
+        text-align: left
+        font-size: 1.5rem
+        color: $black
+        cursor: pointer
+
+    &-content a:hover
+        background-color: $main-color
+        color: #fff !important
+        box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(0 123 255 / 40%)
+
+    &:hover .dropdown-content
+        opacity: 1
+        visibility: visible
+
+@media (max-width:768px)
+    .profile-form
+        max-width: 95%
+        gap: 3rem
+
+        p
+            margin-bottom: 1rem
+
+        .mb-6
+            margin-bottom: 2rem !important
+
+        .img-box
+            width: 100%
+            height: 10rem
+
+            img
+                width: 15rem
+                height: 8rem
+
+    .header
+        .pl-10
+            padding-left: 3rem !important
